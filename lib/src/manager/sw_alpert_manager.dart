@@ -7,7 +7,7 @@ class SwAlert {
   static Future<dynamic> show(BuildContext context,
       {required AlertType type,
       required String title,
-      required Widget content}) {
+      required String content}) {
     return showDialog(
       context: context,
       barrierDismissible: true,

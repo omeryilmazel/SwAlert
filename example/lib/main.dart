@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(onPressed: (){
-          SwAlert.show(context, type: AlertType.SUCCES, title: 'Title', content: Text('ASDSADSAdsadsadasdsa'));
+          SwAlert.show(context, type: AlertType.SUCCES, title: 'Title', content: 'Something went wrong');
         }, child: Text('Show Alert'))
       ),
     );
