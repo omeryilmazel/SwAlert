@@ -3,7 +3,7 @@ import 'package:sw_alert/src/styles/colors.dart';
 
 import '../../sw_alert.dart';
 
-class SwError extends StatelessWidget {
+class AlertError extends StatelessWidget {
   final String title;
   final String content;
   final String onConfirmText;
@@ -11,7 +11,7 @@ class SwError extends StatelessWidget {
   final String onCancelText;
   final VoidCallback? onCancel;
 
-  const SwError({
+  const AlertError({
     Key? key,
     required this.title,
     required this.content,

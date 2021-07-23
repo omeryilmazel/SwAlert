@@ -34,7 +34,7 @@ class SwAlert {
       context: context,
       barrierDismissible: true,
       builder: (ctx) {
-        return SwError(title: title, content: content,onConfirm: onConfirm,onConfirmText: onConfirmText,onCancel: onCancel,onCancelText: onCancelText);
+        return AlertError(title: title, content: content,onConfirm: onConfirm,onConfirmText: onConfirmText,onCancel: onCancel,onCancelText: onCancelText);
       },
     );
   }
