@@ -59,7 +59,7 @@ class SwRating extends StatelessWidget {
   Padding buildImage() {
     return Padding(
       padding: const EdgeInsets.only(top: 16, bottom: 8),
-      child: Image.asset('assets/rate.png', height: 90, width: 120),
+      child: Image.asset('assets/rate.png', height: 90, width: 120,package: 'sw_alert',),
     );
   }
 

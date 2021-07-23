@@ -61,7 +61,7 @@ class SwWarning extends StatelessWidget {
   Padding buildImage() {
     return Padding(
       padding: const EdgeInsets.only(top: 16, bottom: 8),
-      child: Image.asset('assets/warning.png', height: 90, width: 90),
+      child: Image.asset('assets/warning.png', height: 90, width: 90,package: 'sw_alert',),
     );
   }
 
