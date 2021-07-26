@@ -94,7 +94,7 @@ class SwWarning extends StatelessWidget {
                 border: Border.all(color: SwColors.warningColor)),
             child: Center(
               child: Text(
-                'Cancel',
+                onCancelText,
                 style: TextStyle(
                     color: SwColors.warningColor,
                     fontWeight: FontWeight.bold,
@@ -107,7 +107,7 @@ class SwWarning extends StatelessWidget {
         GestureDetector(
           onTap: () {
             if (onConfirm != null) {
-              onCancel!;
+              onConfirm!;
             } else {
               Navigator.pop(context);
             }
@@ -118,7 +118,7 @@ class SwWarning extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: SwColors.warningColor),
               child:
-                  Center(child: Text('Okay!', style: AlertTextStyle.buttonText))),
+                  Center(child: Text(onConfirmText, style: AlertTextStyle.buttonText))),
         ),
       ],
     );

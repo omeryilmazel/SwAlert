@@ -107,7 +107,7 @@ class AlertError extends StatelessWidget {
         GestureDetector(
           onTap: () {
             if (onConfirm != null) {
-              onCancel!;
+              onConfirm!;
             } else {
               Navigator.pop(context);
             }
