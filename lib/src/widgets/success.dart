@@ -68,7 +68,7 @@ class SwSuccess extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (onConfirm != null) {
-          onConfirm!;
+          onConfirm!();
         } else {
           Navigator.pop(context);
         }

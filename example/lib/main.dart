@@ -40,6 +40,9 @@ class MyApp extends StatelessWidget {
                 SwAlert.warning(context,
                     title: 'WARNING',
                     content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+                    onConfirm: (){
+                      print(":D");
+                    },
                     onConfirmText: 'Cancel');
               },
               child: Text('Show Warning')),

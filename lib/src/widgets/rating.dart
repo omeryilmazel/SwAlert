@@ -79,7 +79,7 @@ class SwRating extends StatelessWidget {
         GestureDetector(
           onTap: () {
             if (onConfirm != null) {
-              onConfirm!;
+              onConfirm!();
             } else {
               Navigator.pop(context);
             }

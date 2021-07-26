@@ -82,7 +82,7 @@ class SwWarning extends StatelessWidget {
         GestureDetector(
           onTap: () {
             if (onCancel != null) {
-              onCancel!;
+              onCancel!();
             } else {
               Navigator.pop(context);
             }
@@ -107,7 +107,7 @@ class SwWarning extends StatelessWidget {
         GestureDetector(
           onTap: () {
             if (onConfirm != null) {
-              onConfirm!;
+              onConfirm!();
             } else {
               Navigator.pop(context);
             }
