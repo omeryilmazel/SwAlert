@@ -94,7 +94,7 @@ class AlertError extends StatelessWidget {
                 border: Border.all(color: SwColors.errorColor)),
             child: Center(
               child: Text(
-                'Cancel',
+                onCancelText,
                 style: TextStyle(
                     color: SwColors.errorColor,
                     fontWeight: FontWeight.bold,
@@ -118,7 +118,7 @@ class AlertError extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: SwColors.errorColor),
               child:
-                  Center(child: Text('Okay!', style: AlertTextStyle.buttonText))),
+                  Center(child: Text(onConfirmText, style: AlertTextStyle.buttonText))),
         ),
       ],
     );
