@@ -88,7 +88,7 @@ class AlertError extends StatelessWidget {
             }
           },
           child: Container(
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 46),
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: SwColors.errorColor)),
@@ -113,7 +113,7 @@ class AlertError extends StatelessWidget {
             }
           },
           child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 46),
+              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: SwColors.errorColor),

@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
                 SwAlert.error(context,
                     title: 'ERROR',
                     content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-                    onConfirmText: 'Cancel');
+                    onConfirmText: 'Premium Al');
               },
               child: Text('Show Error')),
           ElevatedButton(
