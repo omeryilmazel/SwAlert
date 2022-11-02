@@ -25,7 +25,7 @@ class SwSuccess extends StatelessWidget {
         clipBehavior: Clip.hardEdge,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: Color(0xFFFFFFFF)),
+            borderRadius: BorderRadius.circular(12), color: Color(0xFF131517)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [buildTitle(),buildImage(),buildContent(),button(context)],
