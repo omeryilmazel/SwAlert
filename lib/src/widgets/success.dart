@@ -22,6 +22,7 @@ class SwSuccess extends StatelessWidget {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
+        padding:  EdgeInsets.all(32),
         clipBehavior: Clip.hardEdge,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -36,7 +37,7 @@ class SwSuccess extends StatelessWidget {
 
   Container buildContent() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      margin: EdgeInsets.only(top: 8, left: 16, right: 16),
       width: double.maxFinite,
       child: Center(
           child: Text(
@@ -50,7 +51,7 @@ class SwSuccess extends StatelessWidget {
   Padding buildImage() {
     return Padding(
       padding: const EdgeInsets.only(top: 16, bottom: 8),
-      child: Image.asset('assets/success.png', height: 90, width: 90,package: 'sw_alert',),
+      child: Image.asset('assets/success.png', height: 64, width: 64,package: 'sw_alert',),
     );
   }
 
@@ -74,11 +75,10 @@ class SwSuccess extends StatelessWidget {
         }
       },
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.5,
-        margin: EdgeInsets.only(bottom: 16,top: 8),
-        padding: EdgeInsets.symmetric(vertical: 12),
+        margin: EdgeInsets.only(bottom: 32,top: 16),
+        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: SwColors.mainColor),
+            borderRadius: BorderRadius.circular(100), color: SwColors.mainColor),
         child: Center(
           child: Text(onConfirmText, style: AlertTextStyle.buttonText,textAlign: TextAlign.center),
         ),
