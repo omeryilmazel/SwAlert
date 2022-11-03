@@ -26,19 +26,18 @@ class AlertError extends StatelessWidget {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
+        padding:  EdgeInsets.all(32),
         clipBehavior: Clip.hardEdge,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: Color(0xFFFFFFFF)),
+            borderRadius: BorderRadius.circular(12), color: Color(0xFF131517)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             buildTitle(),
             buildImage(),
             buildContent(),
-            SizedBox(height: 8),
             buttons(context),
-            SizedBox(height: 16)
           ],
         ),
       ),
@@ -47,7 +46,7 @@ class AlertError extends StatelessWidget {
 
   Container buildContent() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      margin: EdgeInsets.only(top: 8, left: 0, right: 0),
       width: double.maxFinite,
       child: Center(
           child: Text(
@@ -60,17 +59,14 @@ class AlertError extends StatelessWidget {
 
   Padding buildImage() {
     return Padding(
-      padding: const EdgeInsets.only(top: 16, bottom: 8),
-      child: Image.asset('assets/error.png', height: 90, width: 90,package: 'sw_alert',),
+      padding: const EdgeInsets.only(top: 0, bottom: 0),
+      child: Image.asset('assets/error.png', height: 64, width: 64,package: 'sw_alert',),
     );
   }
 
   Container buildTitle() {
     return Container(
-      padding: EdgeInsets.all(16),
-      color: Color(0xFFF2F2F2),
-      height: 75,
-      width: double.maxFinite,
+      margin: EdgeInsets.only(top: 16),
       child: Center(child: Text(title, style: AlertTextStyle.title)),
     );
   }
@@ -88,22 +84,23 @@ class AlertError extends StatelessWidget {
             }
           },
           child: Container(
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+            margin: EdgeInsets.only(bottom: 0,top: 16),
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: SwColors.errorColor)),
+                borderRadius: BorderRadius.circular(100),
+                border: Border.all(color: SwColors.mainColor)),
             child: Center(
               child: Text(
                 onCancelText,
                 style: TextStyle(
-                    color: SwColors.errorColor,
+                    color: SwColors.mainColor,
                     fontWeight: FontWeight.bold,
-                    fontSize: 16),
+                    fontSize: 14),
               ),
             ),
           ),
         ),
-        SizedBox(width: 8),
+        SizedBox(width: 16),
         GestureDetector(
           onTap: () {
             if (onConfirm != null) {
@@ -113,10 +110,11 @@ class AlertError extends StatelessWidget {
             }
           },
           child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+              margin: EdgeInsets.only(bottom: 0,top: 16),
+              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: SwColors.errorColor),
+                  borderRadius: BorderRadius.circular(100),
+                  color: SwColors.mainColor),
               child:
                   Center(child: Text(onConfirmText, style: AlertTextStyle.buttonText))),
         ),
