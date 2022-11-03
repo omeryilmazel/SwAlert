@@ -34,8 +34,8 @@ class AlertError extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            buildTitle(),
             buildImage(),
+            buildTitle(),
             buildContent(),
             buttons(context),
           ],
