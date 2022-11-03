@@ -29,7 +29,7 @@ class SwSuccess extends StatelessWidget {
             borderRadius: BorderRadius.circular(12), color: Color(0xFF131517)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [buildTitle(),buildImage(),buildContent(),button(context)],
+          children: [buildImage(),buildTitle(),buildContent(),button(context)],
         ),
       ),
     );
@@ -37,7 +37,7 @@ class SwSuccess extends StatelessWidget {
 
   Container buildContent() {
     return Container(
-      margin: EdgeInsets.only(top: 8, left: 16, right: 16),
+      margin: EdgeInsets.only(top: 8, left: 0, right: 0),
       width: double.maxFinite,
       child: Center(
           child: Text(
@@ -50,13 +50,14 @@ class SwSuccess extends StatelessWidget {
 
   Padding buildImage() {
     return Padding(
-      padding: const EdgeInsets.only(top: 16, bottom: 8),
+      padding: const EdgeInsets.only(top: 0, bottom: 0),
       child: Image.asset('assets/success.png', height: 64, width: 64,package: 'sw_alert',),
     );
   }
 
   Container buildTitle() {
     return Container(
+      margin: EdgeInsets.only(top: 16),
       child: Center(child: Text(title, style: AlertTextStyle.title)),
     );
   }
@@ -75,9 +76,7 @@ class SwSuccess extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100), color: SwColors.mainColor),
-        child: Center(
           child: Text(onConfirmText, style: AlertTextStyle.buttonText,textAlign: TextAlign.center),
-        ),
       ),
     );
   }
