@@ -57,10 +57,6 @@ class SwSuccess extends StatelessWidget {
 
   Container buildTitle() {
     return Container(
-      padding: EdgeInsets.all(16),
-      color: Color(0xFFF2F2F2),
-      height: 75,
-      width: double.maxFinite,
       child: Center(child: Text(title, style: AlertTextStyle.title)),
     );
   }
@@ -75,7 +71,7 @@ class SwSuccess extends StatelessWidget {
         }
       },
       child: Container(
-        margin: EdgeInsets.only(bottom: 32,top: 16),
+        margin: EdgeInsets.only(bottom: 0,top: 16),
         padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100), color: SwColors.mainColor),
