@@ -26,7 +26,7 @@ class AlertError extends StatelessWidget {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
-        padding:  EdgeInsets.all(32),
+        padding: EdgeInsets.all(32),
         clipBehavior: Clip.hardEdge,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -60,7 +60,12 @@ class AlertError extends StatelessWidget {
   Padding buildImage() {
     return Padding(
       padding: const EdgeInsets.only(top: 0, bottom: 0),
-      child: Image.asset('assets/error.png', height: 64, width: 64,package: 'sw_alert',),
+      child: Image.asset(
+        'assets/error.png',
+        height: 64,
+        width: 64,
+        package: 'sw_alert',
+      ),
     );
   }
 
@@ -84,11 +89,11 @@ class AlertError extends StatelessWidget {
             }
           },
           child: Container(
-            margin: EdgeInsets.only(bottom: 0,top: 16),
+            margin: EdgeInsets.only(bottom: 0, top: 16),
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                border: Border.all(color: SwColors.mainColor)),
+                color: Color(0xFFFFFFFF),
+                borderRadius: BorderRadius.circular(100)),
             child: Center(
               child: Text(
                 onCancelText,
@@ -110,13 +115,14 @@ class AlertError extends StatelessWidget {
             }
           },
           child: Container(
-              margin: EdgeInsets.only(bottom: 0,top: 16),
+              margin: EdgeInsets.only(bottom: 0, top: 16),
               padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
                   color: SwColors.mainColor),
-              child:
-                  Center(child: Text(onConfirmText, style: AlertTextStyle.buttonText))),
+              child: Center(
+                  child:
+                      Text(onConfirmText, style: AlertTextStyle.buttonText))),
         ),
       ],
     );
