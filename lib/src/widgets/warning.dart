@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:follower_stats/app/styles/colors.dart';
 import 'package:sw_alert/src/styles/colors.dart';
 
 import '../../sw_alert.dart';
@@ -26,7 +27,7 @@ class SwWarning extends StatelessWidget {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
-        padding:  EdgeInsets.all(32),
+        padding: EdgeInsets.all(32),
         clipBehavior: Clip.hardEdge,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -60,7 +61,12 @@ class SwWarning extends StatelessWidget {
   Padding buildImage() {
     return Padding(
       padding: const EdgeInsets.only(top: 0, bottom: 0),
-      child: Image.asset('assets/warning.png', height: 64, width: 64,package: 'sw_alert',),
+      child: Image.asset(
+        'assets/warning.png',
+        height: 64,
+        width: 64,
+        package: 'sw_alert',
+      ),
     );
   }
 
@@ -84,19 +90,19 @@ class SwWarning extends StatelessWidget {
             }
           },
           child: Container(
-            margin: EdgeInsets.only(bottom: 0,top: 16),
+            margin: EdgeInsets.only(bottom: 0, top: 16),
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                border: Border.all(color: SwColors.mainColor)),
-
-              child: Text(
-                onCancelText,
-                style: TextStyle(
-                    color: SwColors.mainColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14),
-              ),
+              color: Color(0xFFFFFFFF),
+              borderRadius: BorderRadius.circular(100),
+            ),
+            child: Text(
+              onCancelText,
+              style: TextStyle(
+                  color: SwColors.mainColor,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14),
+            ),
           ),
         ),
         SizedBox(width: 16),
@@ -109,7 +115,7 @@ class SwWarning extends StatelessWidget {
             }
           },
           child: Container(
-              margin: EdgeInsets.only(bottom: 0,top: 16),
+              margin: EdgeInsets.only(bottom: 0, top: 16),
               padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
